@@ -1,0 +1,34 @@
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  background-color: #f7f3e9; /* Lys baggrund */
+}
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+th {
+  background-color: #d1c4af; /* Neutral farve til header */
+  color: #000;
+}
+.highlight {
+  background-color: #9d36362b; /* Lys rød til fremhævede rækker */
+}
+.image-cell {
+  text-align: center;
+  width: 150px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.footer {
+  text-align: center;
+  font-weight: bold;
+  color: #b22222; /* Mørkerød tekst */
+}
