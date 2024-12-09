@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFAF68;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+/* Gør logoet absolut og placer det i forhold til headeren */
+.logo {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    top: 50%; /* Centrer logoet vertikalt */
+    left: 51%; /* Centrer logoet horisontalt */
+    transform: translate(-50%, -50%); /* Juster for nøjagtig centreret placering */
+    z-index: 2; /* Sørger for, at logoet er over baggrunden */
+    background-color: transparent;
+}
+
+/* Baggrundsbillede */
+.fullscreen-header {
+    position: relative; /* Gør headeren en kontekst for absolut positionering */
+    width: 100%;
+    height: 750px;
+    overflow: hidden; /* Sikrer, at elementer uden for headerens grænser skjules */
+    z-index: 1;
+}
+  .menu {
+  position: absolute;
+  top: 20px; 
+  right: 20px; 
+  background-color: transparent;
+  }
+
+  .menu-btn {
+  font-size: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #870000;
+  margin-right: 0px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    border: 2px solid #870000;
+    padding: 20px; 
+    width: 250px; 
+    z-index: 3;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #870000;
+    padding: 15px 0; 
+    font-size: 24px; 
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left; 
+}
+
+.menu:hover .dropdown-content {
+    display: block;
+}
+
+
+.menu2 {
+    list-style: none; /* Fjern bullets */
+    padding: 0;
+    display: flex; /* Lav listen vandret */
+    gap: 150px;
+    background-color: #FFAF68; /* Baggrundsfarve */
+    margin-left: 130px;
+
+}
+
+.menu2 a {
+    display: block; /* Gør links til "blokke" for nem klikbarhed */
+    color: #a484e9;
+    text-decoration: none;
+    padding: 20px 40px; /* Reducer padding for at gøre menupunkterne mindre */
+    transition: background-color 0.3s; /* Glidende effekt ved hover */
+    font-size: medium;
+
+}
+
+
+
+
+/* Container til karusellen */
+.carousel {
+    width: 100%; /* Fylder hele bredden */
+    overflow: hidden; /* Skjuler billeder uden for synsfeltet */
+    position: relative;
+    height: 500px; /* Fast højde svarende til billederne */
+    margin-top: 0px;
+ 
+}
+
+/* Spor til billederne */
+.carousel-track {
+    display: flex;
+    gap: 60px;
+    animation: slide-continuous 30s linear infinite; /* Sømløs glidende animation */
+}
+
+/* Billederne i karusellen */
+.carousel-track img {
+    width: 400px; /* Billeder fylder hele containerens bredde */
+    height: 650px; /* Fast højde */
+    object-fit: cover; /* Sørger for, at billedet dækker uden forvrængning */
+
+
+}
+
+/* Kontinuerlig animation */
+@keyframes slide-continuous {
+    from {
+        transform: translateX(0); /* Start ved første billede */
+    }
+    to {
+        transform: translateX(-50%); /* Flyt billederne halvdelen af deres bredde */
+    }
+}
