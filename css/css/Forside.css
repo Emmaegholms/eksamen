@@ -5,6 +5,9 @@
     background-color: #FFAF68;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+
+  
 /* Gør logoet absolut og placer det i forhold til headeren */
 .logo {
     position: absolute;
@@ -25,10 +28,24 @@
     overflow: hidden; /* Sikrer, at elementer uden for headerens grænser skjules */
     z-index: 1;
 }
+
+/* Gør logoet absolut og placer det i forhold til headeren */
+.logolille {
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    margin-top: 50px;
+    margin-left: -1420px;
+    transform: translate(-50%, -50%); /* Juster for nøjagtig centreret placering */
+    z-index: 2; /* Sørger for, at logoet er over baggrunden */
+    background-color: transparent;
+}
+
+
   .menu {
   position: absolute;
-  top: 20px; 
-  right: 20px; 
+  top: 40px; 
+  right: 30px; 
   background-color: transparent;
   }
 
@@ -41,25 +58,59 @@
   margin-right: 0px;
   }
 
+  .menu-btn span,
+  .menu-btn::before,
+  .menu-btn::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 5px;
+    border-radius: 3px; /* Giver afrundede kanter */
+    margin: 5px 0;
+  }
+  
+  .menu-btn span {
+    background-color: #ff0000; /* Øverste streg */
+    margin-left: 5px;
+    left: 5px;
+
+  }
+  
+  .menu-btn::before {
+    background-color: #00ff00; /* Midterste streg */
+    position: absolute;
+    top: 11px;
+    left: 5px;
+  }
+  
+  .menu-btn::after {
+    background-color: #0000ff; /* Nederste streg */
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+  }
+
+
   .dropdown-content {
     display: none;
     position: absolute;
-    top: 60px; 
-    right: 0;
-    border: 2px solid #870000;
+    top: 20px; 
+    right: -12px;
     padding: 20px; 
     width: 250px; 
     z-index: 3;
+    background-color: transparent;
 }
 
 .dropdown-content a {
     display: block;
-    color: #870000;
+    color: #622adc;
     padding: 15px 0; 
     font-size: 24px; 
     font-weight: bold;
     text-decoration: none;
-    text-align: left; 
+    text-align: right; 
+    background-color: transparent;
 }
 
 .menu:hover .dropdown-content {
@@ -84,6 +135,7 @@
     padding: 20px 40px; /* Reducer padding for at gøre menupunkterne mindre */
     transition: background-color 0.3s; /* Glidende effekt ved hover */
     font-size: medium;
+    font-weight: bolder;
 
 }
 
@@ -124,4 +176,46 @@
     to {
         transform: translateX(-50%); /* Flyt billederne halvdelen af deres bredde */
     }
+}
+
+/* Footer styling til at vise elementer ved siden af hinanden */
+
+footer p, footer div {
+    background-color: transparent !important; /* Nulstil enhver baggrundsfarve */
+}
+
+footer {
+    display: flex;
+    flex-direction: row; /* Sætter elementerne i en række */
+    justify-content: space-between; /* Fordeler pladsen jævnt mellem elementerne */
+    align-items: center;
+    
+  }
+
+
+
+  .footerbaggrund {
+    position: absolute; /* Sørger for, at baggrunden er separat fra andre elementer */
+    width: 100%; /* Tilpasser bredden */
+    z-index: 0; /* Sørger for, at baggrunden er bagved */
+    background-color: transparent;
+    margin-left: -15px;
+
+}
+
+.aabeningstider {
+    position: relative; /* Gør teksten positionerbar over baggrunden */
+    z-index: 1; /* Sørger for, at teksten vises over baggrunden */
+    text-align: center;
+    line-height: 1.8;
+    margin: 20px 0;
+    font-size: 18px;
+
+}
+
+
+.lokation {
+    margin: 10px 0; /* Ekstra afstand over og under hver linje i åbningstiderne */
+    z-index: 1;
+
 }
