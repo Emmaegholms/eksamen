@@ -1,34 +1,157 @@
-table {
-  width: 90%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  font-family: Arial, sans-serif;
-  text-align: left;
-  background-color: #f7f3e9; /* Lys baggrund */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-th, td {
-  padding: 12px;
-  border: 1px solid #ccc;
-  vertical-align: top;
+
+
+
+/* Baggrundsbillede */
+.fullscreen-header {
+  position: relative; /* Gør headeren en kontekst for absolut positionering */
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  z-index: 1;
 }
-th {
-  background-color: #d1c4af; /* Neutral farve til header */
-  color: #000;
+
+
+/* Gør logoet absolut og placer det i forhold til headeren */
+.logolille {
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  margin-top: 50px;
+  margin-left: -1420px;
+  transform: translate(-50%, -50%); /* Juster for nøjagtig centreret placering */
+  z-index: 2; /* Sørger for, at logoet er over baggrunden */
+  background-color: transparent;
 }
-.highlight {
-  background-color: #9d36362b; /* Lys rød til fremhævede rækker */
+
+
+.menu {
+position: absolute;
+top: 40px; 
+right: 30px; 
+background-color: transparent;
 }
-.image-cell {
-  text-align: center;
-  width: 150px;
+
+.menu-btn {
+font-size: 50px;
+background-color: transparent;
+border: none;
+cursor: pointer;
+color: #870000;
+margin-right: 0px;
 }
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+
+.menu-btn span,
+.menu-btn::before,
+.menu-btn::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 5px;
+  border-radius: 3px; /* Giver afrundede kanter */
+  margin: 5px 0;
 }
-.footer {
-  text-align: center;
+
+.menu-btn span {
+  background-color: #ff0000; /* Øverste streg */
+  margin-left: 5px;
+  left: 5px;
+
+}
+
+.menu-btn::before {
+  background-color: #00ff00; /* Midterste streg */
+  position: absolute;
+  top: 11px;
+  left: 5px;
+}
+
+.menu-btn::after {
+  background-color: #0000ff; /* Nederste streg */
+  position: absolute;
+  bottom: 15px;
+  left: 5px;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 20px; 
+  right: -12px;
+  padding: 20px; 
+  width: 250px; 
+  z-index: 3;
+  background-color: transparent;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #622adc;
+  padding: 15px 0; 
+  font-size: 24px; 
   font-weight: bold;
-  color: #b22222; /* Mørkerød tekst */
+  text-decoration: none;
+  text-align: right; 
+  background-color: transparent;
+}
+
+.menu:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+footer p, footer div {
+    background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
+}
+
+
+/* Footer styling for fast placering */
+footer {
+  position: fixed; /* Fikserer footeren i bunden af vinduet */
+  bottom: 0; /* Placerer den helt i bunden */
+  left: 0;
+  width: 100%; /* Sørger for, at den dækker hele bredden */
+  height: 600px;
+  display: flex;
+  flex-direction: row; /* Elementer på en række */
+  justify-content: space-between; /* Plads mellem elementerne */
+  align-items: center; /* Justerer lodret centreret */
+  padding: 20px; /* Indvendig margen */
+  z-index: 10; /* Sørger for, at den er foran andet indhold */
+}
+
+/* Baggrundsbillede for footer */
+.footerbaggrund {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Sørger for, at billedet er bag teksten */
+
+}
+
+/* Sikrer, at teksten er synlig */
+.aabeningstider, .lokation {
+  position: relative;
+  z-index: 1; /* Sørger for, at teksten er over baggrunden */
+  color: #333; /* Mørk tekstfarve */
+  text-align: center;
+  margin-bottom: -500px;
+}
+
+/* For at undgå problemer med sideindhold */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  padding-bottom: 100px; /* Giver plads til den faste footer */
 }

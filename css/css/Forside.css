@@ -178,44 +178,69 @@
     }
 }
 
-/* Footer styling til at vise elementer ved siden af hinanden */
 
+/* Footer styling */
 footer p, footer div {
     background-color: transparent !important; /* Nulstil enhver baggrundsfarve */
-}
+    z-index: 6;}
 
 footer {
     display: flex;
-    flex-direction: row; /* Sætter elementerne i en række */
-    justify-content: space-between; /* Fordeler pladsen jævnt mellem elementerne */
-    align-items: center;
-    
+    justify-content: space-between; /* Jævn afstand mellem sektionerne */
+    align-items: center; /* Centerer elementerne lodret */
+    padding: 20px 60px;
+    color: #060606;
+    font-size: 0.9em;
+  
+
+
+  }
+  
+  footer div {
+    flex: 1; /* Hver sektion får lige meget plads */
+      text-align: center;
+      line-height: 1.6;
+      margin: 0 10px; /* Lidt margin på siderne for hver sektion */
   }
 
 
-
-  .footerbaggrund {
-    position: absolute; /* Sørger for, at baggrunden er separat fra andre elementer */
-    width: 100%; /* Tilpasser bredden */
-    z-index: 0; /* Sørger for, at baggrunden er bagved */
-    background-color: transparent;
-    margin-left: -15px;
-
-}
-
+/* Special styling for hver sektion */
 .aabeningstider {
-    position: relative; /* Gør teksten positionerbar over baggrunden */
-    z-index: 1; /* Sørger for, at teksten vises over baggrunden */
-    text-align: center;
-    line-height: 1.8;
-    margin: 20px 0;
-    font-size: 18px;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Så overskriften og tiden står under hinanden */
+    gap: 5px; /* Afstand mellem linjerne */
+    z-index: 6;
+  }
+  
+  .aabeningstider p {
+    margin: 0; /* Fjerner ekstra margen */
+    z-index: 6;
+  }
+  
+  .aabeningstider div {
+    display: flex;
+    justify-content: space-between; /* Fordeler dag og tid til venstre og højre */
+    width: 100px; 
+    margin: 0 auto; 
+    z-index: 6;
+  }
 
+.footerlogo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-top: -700px;
+    background-color: transparent;
+    z-index: 3;
+    left: 0;
 }
 
 
-.lokation {
-    margin: 10px 0; /* Ekstra afstand over og under hver linje i åbningstiderne */
-    z-index: 1;
 
-}
+  
+
+
+
+  
+
