@@ -1,0 +1,121 @@
+* {
+    background-color: #cc9ace;
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+
+
+.radar-text {
+    font-size: 60px; /* Stor skriftstørrelse */
+    font-weight: bold; /* Fed skrift */
+    color: #5d4299; /* Lilla farve */
+    margin-top: 50px;
+    margin-left: 180px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+  /* Overordnet container */
+  .donation-box {
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    border: 2px solid #481ea4;
+    border-radius: 10px;
+    background-color: #513487;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+/* Runde aftjekningsknapper */
+.radio-group {
+    background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.round-radio {
+    background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fdfdfd;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + .round-radio {
+    background-color: #ffffff;
+    
+}
+
+.radio-label {
+    background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Firkantede knapper */
+.square-buttons {
+    background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.square-button {
+    padding: 10px 20px;
+    border: 2px solid #622adc;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: bold;
+    color: #622adc;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.square-button:hover {
+    background-color: #622adc;
+    color: white;
+}
+
+/* Inputfelt til valgfrit beløb */
+.custom-amount {
+    background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
+    margin-bottom: 20px;
+}
+
+.custom-amount input {
+    width: 80%;
+    padding: 10px;
+    color: #481ea4;
+    border: 2px solid #622adc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+/* Støt nu-knap */
+.donate-button {
+    
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #622adc;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #441a99;
+}
