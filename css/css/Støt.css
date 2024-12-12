@@ -124,4 +124,28 @@ input[type="radio"]:checked + .round-radio {
     width: 420px;
     padding: 10px;
     color: #481ea4;
-    border: 2px solid #622adc
+    border: 2px solid #622adc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+/* Støt nu-knap */
+.donate-button {
+    
+    padding: 10px 20px;
+    width: 80%;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #622adc;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #8764d3;
+}
