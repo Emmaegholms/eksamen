@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #FFAF68;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
   }
+
+  body {
+    background-color: #FFAF68;
+  }
+
 
 
   
@@ -25,7 +29,7 @@
     position: relative; /* Gør headeren en kontekst for absolut positionering */
     width: 100%;
     height: 750px;
-    overflow: hidden; /* Sikrer, at elementer uden for headerens grænser skjules */
+
     z-index: 1;
 }
 
@@ -69,27 +73,31 @@
     margin: 5px 0;
   }
   
+
   .menu-btn span {
-    background-color: #ff0000; /* Øverste streg */
+    background-color: rgb(249, 151, 66); /* Øverste streg */
     margin-left: 5px;
     left: 5px;
-
+    z-index: 100;
+  
   }
   
   .menu-btn::before {
-    background-color: #00ff00; /* Midterste streg */
+    background-color: #ff0000; /* Midterste streg */
     position: absolute;
     top: 11px;
     left: 5px;
+    z-index: 100;
   }
   
   .menu-btn::after {
-    background-color: #0000ff; /* Nederste streg */
+    background-color: #bd2ad7; /* Nederste streg */
     position: absolute;
     bottom: 15px;
     left: 5px;
+    z-index: 100;
   }
-
+  
 
   .dropdown-content {
     display: none;
@@ -152,7 +160,7 @@
 .carousel-track {
     display: flex;
     gap: 60px;
-    animation: slide-continuous 30s linear infinite; /* Sømløs glidende animation */
+    animation: slide-continuous 15s linear infinite; /* Sømløs glidende animation */
 }
 
 /* Billederne i karusellen */
@@ -168,57 +176,152 @@
         transform: translateX(0); /* Start ved første billede */
     }
     to {
-        transform: translateX(-50%); /* Flyt billederne halvdelen af deres bredde */
+        transform: translateX(-100%); /* Flyt billederne halvdelen af deres bredde */
     }
 }
 
 
-footer p, footer div {
-    background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
+/* Anvend Flexbox på body for at sikre footer i bunden */
+body {
+    display: flex;
+    flex-direction: column;  /* Gør at body og footer er i en kolonne */
+    height: 100vh;  /* Sikrer, at body fylder hele højden af skærmen */
+    margin: 0;  /* Fjern margin for at sikre korrekt layout */
+  }
+  section {
+    flex-grow: 1; /* Giver plads til footeren */
   }
   
-  
-  /* Footer styling for fast placering */
+  /* Footerens stil */
   footer {
-  Background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
-  position: relative; /* Fikserer footeren i bunden af vinduet */
-  bottom: 0; /* Placerer den helt i bunden */
-  left: 0;
-  width: 100%; /* Sørger for, at den dækker hele bredden */
-  height: 600px;
-  display: flex;
-  flex-direction: row; /* Elementer på en række */
-  justify-content: space-between; /* Plads mellem elementerne */
-  align-items: center; /* Justerer lodret centreret */
-  padding: 20px; /* Indvendig margen */
-  z-index: 10; /* Sørger for, at den er foran andet indhold */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a484e9;
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* Skubber footeren til bunden af skærmen */
+    z-index: -11; /* Sørger for, at footeren er over baggrundsbilledet */
+    gap: 20px;
   }
   
-  /* Baggrundsbillede for footer */
-  .footerbaggrund {
-  background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Sørger for, at billedet er bag teksten */
-  }
   
-  /* Sikrer, at teksten er synlig */
+  
   .aabeningstider, .lokation {
-  position: relative;
-  z-index: 1; /* Sørger for, at teksten er over baggrunden */
-  color: #333; /* Mørk tekstfarve */
-  text-align: center;
-  margin-bottom: -500px;
+    position: relative; /* Sørger for, at teksten ligger oven på billedet */
+    z-index: 1; /* Sørger for, at teksten ligger over billedet */
+    color: white; /* Gør teksten synlig, hvis billedet har en mørk baggrund */
+    margin-left: 100px;
+    gap: 180px;
+  }
+
+  .logo2 {
+    width: 350px;
+    height: 200px;
+    z-index: 2; /* Sørger for, at logoet er over baggrunden */
+    background-color: transparent;
   }
   
-  /* For at undgå problemer med sideindhold */
-  body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  padding-bottom: 0px; /* Giver plads til den faste footer */
-  }
+  /* Base styles (allerede defineret i din CSS) */
+
+/* Responsiv tilpasning */
+@media (max-width: 768px) { /* iPhone 12 og mindre tablets */
+    .fullscreen-header img {
+        height: 100%; /* Dynamisk højde */
+    }
+    .logo {
+        width: 300px;
+        height: auto;
+        top: 50%;
+        size: auto;
+    }
+    .logolille {
+        width: 200px;
+        height: auto;
+        margin-top: 20px;
+        display: block;
+    }
+    .menu {
+        top: 20px;
+        right: 10px;
+    }
+    .menu-btn {
+        font-size: 30px;
+    }
+    .dropdown-content a {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+    .menu2 {
+        flex-direction: row; /* Gør menuen lodret */
+        gap: 0px;
+        padding: 0;
+        margin-left: 0;
+    }
+    .menu2 a {
+        font-size: 1px;
+        padding: 10px;
+    }
+    .carousel {
+        height: auto;
+    }
+    .carousel-track img {
+        width: 60%; /* Fylder containeren */
+        height: 400px;
+        animation: slide-continuous 100s linear infinite; /* Sømløs glidende animation */
+    }
+    footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+    .aabeningstider, .lokation {
+        margin-left: 0;
+        text-align: center;
+    }
+    .logo2 {
+        width: 200px;
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* iPad */
+    .fullscreen-header {
+        height: 600px; /* Tilpas højde til skærmen */
+    }
+    .logo {
+        width: 500px;
+        height: auto;
+   
+    }
+    .logolille {
+        width: 500px;
+        height: auto;
+    }
+    .menu2 {
+        flex-direction: row; /* Gør menuen lodret */
+        gap: 0px;
+        padding: 0;
+        margin-left: 0;
+    }
+    .menu2 a {
+        font-size: 1px;
+        padding: 10px;
+    }
+    .carousel-track img {
+        width: 300px; /* Tilpas billedstørrelsen */
+        height: auto;
+    }
+    footer {
+        padding: 20px;
+        justify-content: space-around;
+    }
+    .aabeningstider, .lokation {
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+  
+
   

@@ -1,8 +1,13 @@
 * {
-    background-color: #cc9ace;
-    font-family: 'Times New Roman', Times, serif;
-    
+
+    font-family: 'Times New Roman', Times, serif; 
   }
+
+  body {
+    background-color: #cc9ace;
+
+  }
+
 
 
 .radar-tekst {
@@ -147,4 +152,84 @@ input[type="radio"]:checked + .round-radio {
 
 .donate-button:hover {
     background-color: #8764d3;
+}
+
+
+/* Responsivitet til iPad */
+@media (max-width: 1024px) {
+    .radar-tekst {
+        font-size: 50px;
+        margin-left: 100px;
+    }
+
+    .støttetekst {
+        font-size: 35px;
+        margin-left: 650px;
+    }
+
+    .BilledeStøt {
+        width: 500px;
+        height: 250px;
+        margin-left: 20px;
+    }
+
+    .donation-box {
+        width: 80%;
+        right: 0;
+        top: 55%; 
+    }
+
+    .square-button {
+        width: 120px;
+        font-size: 18px;
+    }
+
+    .custom-amount input {
+        width: 90%;
+    }
+
+    .donate-button {
+        width: 90%;
+    }
+}
+
+/* Responsivitet til iPhone */
+@media (max-width: 480px) {
+    .radar-tekst {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .støttetekst {
+        font-size: 30px;
+        margin-left: 100px;
+    }
+
+    .BilledeStøt {
+        width: 30%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .donation-box {
+        width: 40%;
+        height: 40%;
+        top: 50%;
+        right: 0;
+    }
+
+    .square-button {
+        width: 10px;
+        height: 10%;
+        font-size: 10px;
+    }
+
+    .custom-amount input {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .donate-button {
+        width: 100%;
+    }
 }

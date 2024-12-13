@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,14 +7,21 @@
 
 
 
-/* Baggrundsbillede */
 .fullscreen-header {
-  position: relative; /* Gør headeren en kontekst for absolut positionering */
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-
+  position: fixed; /* Gør headeren fast */
+  top: 0; /* Placerer den øverst på siden */
+  left: 0; /* Starter fra venstre */
+  width: 100%; /* Sørger for, at den dækker hele bredden */
+  z-index: 1000; /* Sørger for, at headeren er foran andet indhold */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tilføjer en skygge for at adskille headeren fra indholdet */
 }
+
+/* Tilføj plads over indholdet for at undgå overlap med headeren */
+body {
+  margin: 0;
+  padding-top: 90px; /* Juster værdien afhængigt af headerens højde */
+}
+
 
 
 /* Gør logoet absolut og placer det i forhold til headeren */
@@ -35,7 +42,7 @@ position: absolute;
 top: 40px; 
 right: 30px; 
 background-color: transparent;
-z-index: 100;
+z-index: 0;
 }
 
 
@@ -62,7 +69,7 @@ z-index: 100;
 }
 
 .menu-btn span {
-  background-color: #ff0000; /* Øverste streg */
+  background-color: rgb(249, 151, 66); /* Øverste streg */
   margin-left: 5px;
   left: 5px;
   z-index: 100;
@@ -70,7 +77,7 @@ z-index: 100;
 }
 
 .menu-btn::before {
-  background-color: #00ff00; /* Midterste streg */
+  background-color: #ff0000; /* Midterste streg */
   position: absolute;
   top: 11px;
   left: 5px;
@@ -78,7 +85,7 @@ z-index: 100;
 }
 
 .menu-btn::after {
-  background-color: #0000ff; /* Nederste streg */
+  background-color: #bd2ad7; /* Nederste streg */
   position: absolute;
   bottom: 15px;
   left: 5px;
@@ -114,57 +121,100 @@ z-index: 100;
   display: block;
   z-index: 100;
 }
-
-
-
-
-footer p, footer div {
-  background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
-}
-
-
-/* Footer styling for fast placering */
-footer {
-Background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
-position: relative; /* Fikserer footeren i bunden af vinduet */
-bottom: 0; /* Placerer den helt i bunden */
-left: 0;
-width: 100%; /* Sørger for, at den dækker hele bredden */
-height: 600px;
-display: flex;
-flex-direction: row; /* Elementer på en række */
-justify-content: space-between; /* Plads mellem elementerne */
-align-items: center; /* Justerer lodret centreret */
-padding: 20px; /* Indvendig margen */
-z-index: 10; /* Sørger for, at den er foran andet indhold */
-}
-
-/* Baggrundsbillede for footer */
-.footerbaggrund {
-background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: -1; /* Sørger for, at billedet er bag teksten */
-
-}
-
-/* Sikrer, at teksten er synlig */
-.aabeningstider, .lokation {
-position: relative;
-z-index: 1; /* Sørger for, at teksten er over baggrunden */
-color: #333; /* Mørk tekstfarve */
-text-align: center;
-margin-bottom: -500px;
-}
-
-/* For at undgå problemer med sideindhold */
+/* Anvend Flexbox på body for at sikre footer i bunden */
 body {
-margin: 0;
-padding: 0;
-font-family: Arial, sans-serif;
-padding-bottom: 0px; /* Giver plads til den faste footer */
+  display: flex;
+  flex-direction: column;  /* Gør at body og footer er i en kolonne */
+  height: 100vh;  /* Sikrer, at body fylder hele højden af skærmen */
+  margin: 0;  /* Fjern margin for at sikre korrekt layout */
+}
 
+/* Footerens stil */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #a484e9;
+  width: 100%;
+  position: relative;
+  margin-top: auto; /* Skubber footeren til bunden af skærmen */
+  z-index: -11; /* Sørger for, at footeren er over baggrundsbilledet */
+}
+
+
+
+.aabeningstider, .lokation {
+  position: relative; /* Sørger for, at teksten ligger oven på billedet */
+  z-index: 1; /* Sørger for, at teksten ligger over billedet */
+  color: white; /* Gør teksten synlig, hvis billedet har en mørk baggrund */
+}
+
+.logo2 {
+  width: 350px;
+  height: 200px;
+  z-index: 2; /* Sørger for, at logoet er over baggrunden */
+  background-color: transparent;
+}
+
+
+/* Responsivitet */
+@media (max-width: 1024px) {
+  .logolille {
+    width: 140px;
+  }
+
+  .menu-btn {
+    font-size: 15px;
+  }
+
+  .dropdown-content {
+    width: 200px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aabeningstider, .lokation {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .logolille {
+    width: 120px;
+  }
+
+  .menu-btn {
+    font-size: 30px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logolille {
+    width: 100px;
+  }
+
+  .menu-btn {
+    font-size: 18px;
+  }
+
+  .dropdown-content {
+    width: 150px;
+    text-align: left;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  .aabeningstider, .lokation {
+    font-size: 14px;
+  }
 }
