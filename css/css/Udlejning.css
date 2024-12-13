@@ -1,5 +1,6 @@
 * {
     background-color: #6fbdda;
+
     font-family: 'Times New Roman', Times, serif;
     
   }
@@ -9,8 +10,8 @@
     font-weight: bold; /* Fed skrift */
     color: #223a6f; /* Lilla farve */
     margin-top: 50px;
-    margin-left: 550px;
-    font-family: 'Times New Roman', Times, serif;
+    margin-left: 540px;
+
 }
 
 .lokale1 {
@@ -31,4 +32,86 @@
 align-items: end;
 margin-left: 255px;
     margin-top: -50px;
+}
+
+.facts1 {
+    font-size: 25px; /* Stor skriftstørrelse */
+    font-weight: bold; /* Fed skrift */
+    color: #223a6f; /* Lilla farve */
+    margin-top: -350px;
+    margin-left: 330px;
+}
+
+.facts2 {
+    font-size: 25px; /* Stor skriftstørrelse */
+    font-weight: bold; /* Fed skrift */
+    color: #223a6f; /* Lilla farve */
+    margin-top: -340px;
+    margin-left: 900px;
+}
+
+.tekst1 {
+    font-size: 16px;
+    color: #223a6f;
+    margin-top: 145px;
+    margin-left: 20px;
+
+}
+
+.tekst2 {
+    font-size: 16px;
+    color: #223a6f;
+    margin-left: 590px;
+    margin-top: -163px;
+    
+}
+
+
+/* Firkantede knapper */
+.square-buttons {
+    background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
+    display: flex;
+    justify-content: space-evenly;
+    gap: 250px;
+
+}
+
+.square-button {
+    width: 250px;
+    height: 70px;
+    padding: 20px 20px;
+    border: 2px solid #1c2182;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+    color: #271974;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.square-button:hover {
+    background-color: #5364e7;
+    color: white;
+}
+
+
+.custom-amount {
+    background-color: transparent !important; /* Nulstiller enhver baggrundsfarve */
+    margin-bottom: 20px;
+
+}
+
+.custom-amount input {
+    position: absolute;
+    width: 300px;
+    height: 164px;
+    padding: 10px;
+    color: #0e0687;
+    border: 2px solid #0c1544;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    margin-left: 1150px;
+    margin-top: -272px;
 }

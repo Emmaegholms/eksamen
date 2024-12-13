@@ -1,0 +1,56 @@
+* {
+    background-color: #ffaf68;
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+
+.h1 {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 30px;
+    color: #7b5ac3;
+    margin-bottom: 30px;
+}
+
+  .tekst1 {
+    font-size: 20px; /* Stor skriftstørrelse */
+    font-weight: bold; /* Fed skrift */
+    color: #5d4296; /* Lilla farve */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.kunstner1 {
+width:650px;
+height: 400px;
+margin-left: 30px ;
+}
+
+.tekst2 {
+    position: relative;
+    font-size: 20px; /* Stor skriftstørrelse */
+    color: #5d4296; /* Lilla farve */
+    text-align:center;
+    width: 700px;
+    margin-left: 730px;
+    margin-top: -380px;
+    
+}
+
+.kunstner2 {
+    position: relative;
+    width:650px;
+    height: 400px;
+    margin-left: 750px;
+    margin-top: 180px;
+    }
+
+    .tekst3 {
+        position: relative;
+        font-size: 20px; /* Stor skriftstørrelse */
+        color: #5d4296; /* Lilla farve */
+        text-align:center;
+        width: 700px;
+        margin-left: 30px;
+        margin-top: -390px;
+    }
