@@ -157,18 +157,20 @@ input[type="radio"]:checked + .round-radio {
 @media (max-width: 1024px) {
     .radar-tekst {
         font-size: 10vw;
-        margin-top: -10px;
+        margin-top: 10px;
+        margin-left: 130px;
     }
 
     .BilledeStøt {
-        width: 100%;
-        margin-left: -20px;
+        width: 90%;
+
     }
 
     .støttetekst {
         font-size: 4vw;
-        
-
+        text-align: center;
+        margin-left: 90px;
+        margin-top: 200px;
     }
 
     .square-button {
@@ -177,27 +179,29 @@ input[type="radio"]:checked + .round-radio {
     }
 
     .donation-box {
-        width: 85%;
+        width: 100%;
         padding: 15px;
-        margin-left: 30px;
-        margin-top: 160px;
+        margin-left: 125px;
+        margin-top: 10px;
     }
 }
 
 /* Responsivitet til smartphones */
 @media (max-width: 480px) {
     .radar-tekst {
-        font-size: 6vw;
+        font-size: 10vw;
+        margin-left: 70px;
     }
 
     .BilledeStøt {
-        width: 100%;
+        width: 94%;
 
     }
 
 
     .støttetekst {
-        font-size: 5vw;
+        font-size: 20px;
+
     }
 
 
@@ -218,5 +222,12 @@ input[type="radio"]:checked + .round-radio {
 
     .donate-button {
         font-size: 0.9rem;
+        width: 80%;
+    }
+    .donation-box {
+        width: 90%;
+        padding: 15px;
+        margin-left: 19px;
+        margin-top: 10px;
     }
 }

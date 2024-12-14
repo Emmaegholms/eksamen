@@ -161,7 +161,7 @@ footer {
 /* Responsivitet */
 @media (max-width: 1024px) {
   .logolille {
-    width: 140px;
+    width: 100%;
   }
 
   .menu-btn {
@@ -198,7 +198,7 @@ footer {
 
 @media (max-width: 480px) {
   .logolille {
-    width: 100px;
+    width: 100%;
   }
 
   .menu-btn {

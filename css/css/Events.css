@@ -7,19 +7,20 @@
   }
 
 .h1 {
-    font-size: 60px;
+    font-size: 80px;
     text-align: center;
     margin-top: 30px;
     color: #7b5ac3;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
   .tekst1 {
-    font-size: 20px; /* Stor skriftstørrelse */
+    font-size: 18px; /* Stor skriftstørrelse */
     font-weight: bold; /* Fed skrift */
     color: #5d4296; /* Lilla farve */
     text-align: center;
-    margin-bottom: 30px;
+    margin: 50px;
+    
 }
 
 .kunstner1 {
@@ -30,12 +31,12 @@ margin-left: 30px ;
 
 .tekst2 {
     position: relative;
-    font-size: 20px; /* Stor skriftstørrelse */
+    font-size: 17px; /* Stor skriftstørrelse */
     color: #5d4296; /* Lilla farve */
     text-align:center;
     width: 700px;
     margin-left: 730px;
-    margin-top: -380px;
+    margin-top: -370px;
 }
 
 /* Klikbar tekst */
@@ -63,7 +64,7 @@ margin-left: 30px ;
 
     .tekst3 {
         position: relative;
-        font-size: 20px; /* Stor skriftstørrelse */
+        font-size: 17px; /* Stor skriftstørrelse */
         color: #5d4296; /* Lilla farve */
         text-align:center;
         width: 700px;
