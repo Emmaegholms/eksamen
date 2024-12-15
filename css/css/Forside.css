@@ -185,8 +185,10 @@
 }
 
 .background-image {
+    z-index: 1;
+    position: absolute;
     width: 100%;
-    height: 400px; /* Juster højden af billedet */
+    height: 680px; /* Juster højden af billedet */
     object-fit: cover;
 }
 
@@ -194,9 +196,10 @@
 .timeline {
 
     position: relative;
-
+    z-index: 2; /* Sørger for, at timeline er over baggrunden */
+    background-color: transparent;
     margin: auto;
-    color: transparent !important;
+    
 }
 
 .timeline::before {
@@ -233,7 +236,7 @@
 }
 
 .event h3 {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-size: 35px;
 }
 

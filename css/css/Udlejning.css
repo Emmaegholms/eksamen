@@ -35,26 +35,35 @@ margin-left: 255px;
 }
 
 .facts1 {
-    font-size: 25px; /* Stor skriftstørrelse */
+    font-size: 19px; /* Stor skriftstørrelse */
     font-weight: bold; /* Fed skrift */
     color: #223a6f; /* Lilla farve */
     margin-top: -350px;
     margin-left: 330px;
+    max-width: none; /* Fjern maksimal breddebegrænsning */
+    width: 10%; /* Fyld hele bredden */
+
 }
 
 .facts2 {
-    font-size: 25px; /* Stor skriftstørrelse */
+    font-size: 19px; /* Stor skriftstørrelse */
     font-weight: bold; /* Fed skrift */
     color: #223a6f; /* Lilla farve */
-    margin-top: -340px;
+    margin-top: -310px;
     margin-left: 900px;
+    max-width: none; /* Fjern maksimal breddebegrænsning */
+    width: 10%; /* Fyld hele bredden */
 }
 
 .tekst1 {
     font-size: 16px;
     color: #223a6f;
-    margin-top: 45px;
+    margin-top: 25px;
     margin-left: 20px;
+    max-width: none; /* Fjern maksimal breddebegrænsning */
+    width: 35%; /* Fyld hele bredden */
+    text-align: justify;
+    
 
 }
 
@@ -62,7 +71,10 @@ margin-left: 255px;
     font-size: 16px;
     color: #223a6f;
     margin-left: 590px;
-    margin-top: -163px;
+    margin-top: -128px;
+    max-width: none; /* Fjern maksimal breddebegrænsning */
+    width: 35%; /* Fyld hele bredden */
+    text-align: justify;
     
 }
 
@@ -88,11 +100,11 @@ margin-left: 255px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     margin-top: 50px;
-    margin-left: -350px;
+    margin-left: -390px;
 }
 
 .square-button3 {
-
+    position: absolute;
     width: 250px;
     height: 70px;
     border: 2px solid #1c2182;
@@ -102,7 +114,7 @@ margin-left: 255px;
     color: #271974;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-   margin-top: -40px;
+   margin-top: -90px;
    margin-left: 1175px;
     
 }
@@ -124,18 +136,25 @@ margin-left: 255px;
 .custom-amount input {
     position: absolute !important;
     width: 300px;
-    height: 164px;
-
+    height: 104px;
     color: #0e0687;
     border: 2px solid #0c1544;
     font-size: 16px;
     background-color: #ffffff;
     margin-left: 1150px;
-    margin-top: -386px;
+    margin-top: -266px;
 }
 
-/* Responsivt design til iPhone og små skærme */
-@media screen and (max-width: 768px) {
+
+
+
+/* Generel overgang for glidende ændringer */
+body, .Lokaletekst, .lokale1, .lokale2, .lokale3, .facts1, .facts2, .tekst1, .tekst2, .square-buttons, .custom-amount input {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Responsivt design til iPhone og små skærme */
+  @media screen and (max-width: 767px) {
     body {
       background-color: #6fbdda;
       margin: 0;
@@ -144,50 +163,54 @@ margin-left: 255px;
   
     .Lokaletekst {
       font-size: 40px;
-     margin-left: 50px;
-     margin-top: 120px;
-
+      margin-left: 50px;
+      margin-top: 120px;
+      max-width: 80%;
     }
   
     .lokale1, .lokale2 {
       width: 50%;
       height: auto;
-      margin: 0 auto;
-      margin-bottom: 180px;
-      margin-top: 20px;
+      margin: 20px auto 140px;
     }
-
+  
     .lokale3 {
-        display: none;
+      display: none;
     }
   
     .facts1 {
-        margin-top: -860px;
-        font-size: 16px;
-        margin-left: 200px;
-      }
-
-
-    .facts2 {
-        margin-top: 260px;
-        margin-left: 200px;
-      font-size: 16px;
- 
+      margin-top: -760px;
+      font-size: 13px;
+      margin-left: 200px;
+      max-width: none; /* Fjern maksimal breddebegrænsning */
+      width: 45%; /* Fyld hele bredden */
     }
   
+    .facts2 {
+      margin-top: 260px;
+      margin-left: 200px;
+      font-size: 13px;
+      max-width: none; /* Fjern maksimal breddebegrænsning */
+      width: 45%; /* Fyld hele bredden */
+    }
   
     .tekst1 {
       font-size: 13px;
-      margin: 20px 10px;
+      margin: 20px 20px;
       text-align: justify;
-      margin-top: -610px;
+      margin-top: -520px;
       margin-bottom: 300px;
+      max-width: none; /* Fjern maksimal breddebegrænsning */
+      width: 90%; /* Fyld hele bredden */
     }
-
+  
     .tekst2 {
-        font-size: 13px;
-        margin: 20px 10px;
-        text-align: justify;
+      font-size: 13px;
+      margin: 20px 20px;
+      margin-top: -10px;
+      text-align: justify;
+      max-width: none; /* Fjern maksimal breddebegrænsning */
+      width: 90%; /* Fyld hele bredden */
     }
   
     .square-buttons {
@@ -196,10 +219,10 @@ margin-left: 255px;
       align-items: center;
       margin: 20px 0;
     }
-
+  
     .indsend-button3 {
-        margin-left: -1110px;
-        padding-top: 70px;
+      margin-left: -1110px;
+      padding-top: 70px;
     }
   
     .square-button1, .square-button2 {
@@ -209,57 +232,66 @@ margin-left: 255px;
       font-size: 16px;
       display: none;
     }
-  
+    .square-button3 {
+        position: absolute;
+        width: 250px;
+        height: 70px;
+       margin-top: -45px;
+       margin-left: 1175px;
+        
+    }
+    
     .custom-amount input {
       width: calc(100% - 40px);
       max-width: 300px;
       height: 100px;
       margin: 10px auto;
       padding: 5px;
-      margin-top: -200px;
+      margin-top: -180px;
       margin-left: 40px;
     }
   }
   
   /* Responsivt design til iPad og mellemstore skærme */
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     .Lokaletekst {
       font-size: 50px;
       text-align: center;
       margin: 30px 0;
-
     }
   
     .lokale1, .lokale2, .lokale3 {
       width: 45%;
       height: 500px;
       margin: 10px auto;
-      justify-content:center;
+      justify-content: center;
       margin-left: 25px;
     }
-
+  
     .lokale3 {
-        display: none;
+      display: none;
     }
   
     .facts1, .facts2 {
-  display: none;
+      display: none;
     }
-
+  
     .tekst1 {
-        width: 45%;
-        margin-top: -10px;
-        margin-left: 28px;
+      width: 44%;
+      margin-top: 10px;
+      margin-left: 28px;
+      text-align: justify;
     }
-
+  
     .tekst2 {
-        width: 45%;
-        margin-top: -315px;
-        margin-left: 428px;
+      width: 45%;
+      margin-top: -130px;
+      margin-left: 495px;
+      text-align: justify;
     }
   
     .square-buttons {
-      flex-direction: flex;
+      flex-direction: row;
       gap: 600px;
       justify-content: center;
       margin: 20px 0;
@@ -271,9 +303,9 @@ margin-left: 255px;
       height: 60px;
       font-size: 18px;
     }
-
+  
     .indsend-button3 {
-        display: none;
+      display: none;
     }
   
     .custom-amount input {

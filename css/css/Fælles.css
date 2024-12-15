@@ -161,7 +161,12 @@ footer {
 /* Responsivitet */
 @media (max-width: 1024px) {
   .logolille {
-    width: 100%;
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  margin-top: 50px;
+  margin-left: -750px;
+    
   }
 
   .menu-btn {
@@ -184,7 +189,11 @@ footer {
 
 @media (max-width: 768px) {
   .logolille {
-    width: 120px;
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  margin-top: 50px;
+  margin-left: -700px;
   }
 
   .menu-btn {
@@ -198,7 +207,11 @@ footer {
 
 @media (max-width: 480px) {
   .logolille {
-    width: 100%;
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: -330px;
   }
 
   .menu-btn {

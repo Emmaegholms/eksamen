@@ -22,6 +22,7 @@ body {
     text-align:start;
     margin: 20px 0;
     margin-left: 225px;
+    margin-top: -20px;
 }
 
 .støttetekst {
@@ -153,6 +154,21 @@ input[type="radio"]:checked + .round-radio {
     background-color: #8764d3;
 }
 
+.støttetekst2 {
+    max-width: 55%;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.støttetekst3 {
+    max-width: 33%;
+    margin-left: 930px;
+    margin-top: -145px;
+    margin-bottom: 30px;
+    text-align: justify;
+    
+}
+
 /* Responsivitet til tablets og mindre skærme */
 @media (max-width: 1024px) {
     .radar-tekst {
@@ -163,14 +179,15 @@ input[type="radio"]:checked + .round-radio {
 
     .BilledeStøt {
         width: 90%;
-
     }
 
     .støttetekst {
         font-size: 4vw;
+
         text-align: center;
-        margin-left: 90px;
-        margin-top: 200px;
+        margin-left: 360px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .square-button {
@@ -179,11 +196,27 @@ input[type="radio"]:checked + .round-radio {
     }
 
     .donation-box {
+  
         width: 100%;
         padding: 15px;
-        margin-left: 125px;
-        margin-top: 10px;
+        margin-left: 295px;
+        margin-top: 30px;
     }
+
+    .støttetekst2{
+        max-width: 30%;
+        margin-top: -440px;
+        margin-left: 20px;
+        text-align: justify;
+    }
+
+    .støttetekst3{
+    max-width: 93%;
+    margin-top: 10px;
+    margin-left: 20px;
+    }
+
+
 }
 
 /* Responsivitet til smartphones */
@@ -194,17 +227,19 @@ input[type="radio"]:checked + .round-radio {
     }
 
     .BilledeStøt {
-        width: 94%;
+        width: 100%;
+        margin-left: 0px;
 
     }
 
 
     .støttetekst {
         font-size: 20px;
-
+        margin-top: -0px;
+        margin-left: 60px;
     }
 
-
+  
 
     .square-buttons {
         flex-direction: column;
@@ -228,6 +263,16 @@ input[type="radio"]:checked + .round-radio {
         width: 90%;
         padding: 15px;
         margin-left: 19px;
-        margin-top: 10px;
+        margin-top: 0px;
+    }
+
+    .støttetekst2{
+        display: none;
+    }
+
+    .støttetekst3{
+    max-width: 90%;
+    margin-top: 10px;
+    margin-left: 20px;
     }
 }
