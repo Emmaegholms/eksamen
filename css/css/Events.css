@@ -18,4 +18,123 @@
     font-size: 18px; /* Stor skriftstørrelse */
     font-weight: bold; /* Fed skrift */
     color: #5d4296; /* Lilla farve */
-    text-align: ce
+    text-align: center;
+    margin: 50px;
+    
+}
+
+.kunstner1 {
+width:650px;
+height: 400px;
+margin-left: 30px ;
+}
+
+.tekst2 {
+    position: relative;
+    font-size: 17px; /* Stor skriftstørrelse */
+    color: #5d4296; /* Lilla farve */
+    text-align:center;
+    width: 700px;
+    margin-left: 730px;
+    margin-top: -370px;
+}
+
+/* Klikbar tekst */
+.knap1 {
+    display: inline-block; /* Gør teksten klikbar som en knap */
+    padding: 10px 15px; /* Giver tekstområdet lidt plads */
+    font-weight: bold;
+    font-size: 20px;
+    color: #383048;
+    text-decoration: none; /* Fjerner understregning på links */
+    cursor: pointer; /* Ændrer cursoren til en hånd ved hover */
+    transition: background-color 0.3s, color 0.3s; /* Glidende effekt */
+    margin-left: 1020px;
+    margin-top: 30px;
+}
+
+
+.kunstner2 {
+    position: relative;
+    width:650px;
+    height: 400px;
+    margin-left: 750px;
+    margin-top: 50px;
+    }
+
+    .tekst3 {
+        position: relative;
+        font-size: 17px; /* Stor skriftstørrelse */
+        color: #5d4296; /* Lilla farve */
+        text-align:center;
+        width: 700px;
+        margin-left: 30px;
+        margin-top: -390px;
+    }
+
+    /* Klikbar tekst */
+.knap2 {
+    display: inline-block; /* Gør teksten klikbar som en knap */
+    padding: 10px 15px; /* Giver tekstområdet lidt plads */
+    font-weight: bold;
+    font-size: 20px;
+    color: #383048;
+    text-decoration: none; /* Fjerner understregning på links */
+    cursor: pointer; /* Ændrer cursoren til en hånd ved hover */
+    transition: background-color 0.3s, color 0.3s; /* Glidende effekt */
+    margin-left: 320px;
+    margin-top: 30px;
+}
+
+/* Responsivitet til iPad */
+@media (max-width: 1024px) {
+    .h1 {
+        font-size: 50px;
+    }
+
+    .kunstner1, .kunstner2 {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .tekst2, .tekst3 {
+        font-size: 18px;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+
+    .knap1, .knap2 {
+        font-size: 18px;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* Responsivitet til iPhone */
+@media (max-width: 480px) {
+    .h1 {
+        font-size: 40px;
+    }
+
+    .tekst1, .tekst2, .tekst3 {
+        font-size: 16px;
+        text-align: center;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .kunstner1, .kunstner2 {
+        width: 100%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .knap1, .knap2 {
+        font-size: 16px;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
