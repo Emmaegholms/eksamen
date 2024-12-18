@@ -18,7 +18,7 @@
     width: 700px;
     height: 400px;
     top: 50%; /* Centrer logoet vertikalt */
-    left: 51%; /* Centrer logoet horisontalt */
+    left: 51%; 
     transform: translate(-50%, -50%); /* Juster for nøjagtig centreret placering */
     z-index: 2; /* Sørger for, at logoet er over baggrunden */
     background-color: transparent;
@@ -176,7 +176,7 @@
         transform: translateX(0); /* Start ved første billede */
     }
     to {
-        transform: translateX(-100%); /* Flyt billederne halvdelen af deres bredde */
+        transform: translateX(-100%); /* Flyt billederne 100% af deres bredde */
     }
 }
 
@@ -262,7 +262,6 @@
 
 
 
-/* Anvend Flexbox på body for at sikre footer i bunden */
 body {
     display: flex;
     flex-direction: column;  /* Gør at body og footer er i en kolonne */
@@ -270,7 +269,7 @@ body {
     margin: 0;  /* Fjern margin for at sikre korrekt layout */
   }
   section {
-    flex-grow: 1; /* Giver plads til footeren */
+    flex-grow: 1; /* Giver plads */
   }
 
 
@@ -305,7 +304,6 @@ body {
     background-color: transparent;
   }
   
-  /* Base styles (allerede defineret i din CSS) */
 
 /* Responsiv tilpasning */
 @media (max-width: 768px) { /* iPhone 12 og mindre tablets */
@@ -316,7 +314,6 @@ body {
         width: 300px;
         height: auto;
         top: 50%;
-        size: auto;
     }
     .logolille {
         width: 200px;

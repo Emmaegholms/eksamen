@@ -8,7 +8,7 @@ body {
   .Lokaletekst {
     font-size: 60px; /* Stor skriftstørrelse */
     font-weight: bold; /* Fed skrift */
-    color: #223a6f; /* Lilla farve */
+    color: #223a6f; /* blå farve */
     margin-top: 50px;
     margin-left: 540px;
 
@@ -37,22 +37,22 @@ margin-left: 255px;
 .facts1 {
     font-size: 19px; /* Stor skriftstørrelse */
     font-weight: bold; /* Fed skrift */
-    color: #223a6f; /* Lilla farve */
+    color: #223a6f; /* blå farve */
     margin-top: -350px;
     margin-left: 330px;
     max-width: none; /* Fjern maksimal breddebegrænsning */
-    width: 10%; /* Fyld hele bredden */
+    width: 10%; /* bredden */
 
 }
 
 .facts2 {
     font-size: 19px; /* Stor skriftstørrelse */
     font-weight: bold; /* Fed skrift */
-    color: #223a6f; /* Lilla farve */
+    color: #223a6f; /* blå farve */
     margin-top: -310px;
     margin-left: 900px;
     max-width: none; /* Fjern maksimal breddebegrænsning */
-    width: 10%; /* Fyld hele bredden */
+    width: 10%; /* bredden */
 }
 
 .tekst1 {
@@ -61,7 +61,7 @@ margin-left: 255px;
     margin-top: 25px;
     margin-left: 20px;
     max-width: none; /* Fjern maksimal breddebegrænsning */
-    width: 35%; /* Fyld hele bredden */
+    width: 35%; /* bredden */
     text-align: justify;
     
 
@@ -73,7 +73,7 @@ margin-left: 255px;
     margin-left: 590px;
     margin-top: -128px;
     max-width: none; /* Fjern maksimal breddebegrænsning */
-    width: 35%; /* Fyld hele bredden */
+    width: 35%; /* bredden */
     text-align: justify;
     
 }

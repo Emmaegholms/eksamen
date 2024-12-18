@@ -147,7 +147,7 @@ footer {
 .aabeningstider, .lokation {
   position: relative; /* Sørger for, at teksten ligger oven på billedet */
   z-index: 1; /* Sørger for, at teksten ligger over billedet */
-  color: white; /* Gør teksten synlig, hvis billedet har en mørk baggrund */
+  color: white; /* Gør teksten synlig, hvis billedet har en lys baggrund */
 }
 
 .logo2 {
